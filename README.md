@@ -1,5 +1,7 @@
 # FennecSeg
 
+<p align="center"><img src="docs/hero.png" alt="FennecSeg predictions on a CT scan: 3D render, coronal and sagittal slices" width="100%"></p>
+
 Compact, fast 3D CT segmentation models, one small network per group of structures, and a library to run them
 on any CT scan. No TotalSegmentator or nnU-Net installation needed.
 
@@ -9,11 +11,15 @@ on any CT scan. No TotalSegmentator or nnU-Net installation needed.
 | `spine26` 0.1.0 | vertebrae C1–L6 and sacrum | 0.894 | 0.934 | 1.20 | 6.2 GB |
 | `thorax7` 0.1.0 | five lung lobes, trachea, heart | 0.917 | 0.903 | 1.10 | 3.2 GB |
 
+<p align="center"><img src="docs/models.png" alt="abdomen14, thorax7 and spine26 predictions with their benchmark scores" width="100%"></p>
+
 Benchmark: all 109 scans of the official test split of the TotalSegmentator v3 dataset (never seen in
 training), NVIDIA RTX 4070, time from file in to file out. On the same scans and structures, TotalSegmentator
 v3.1 (one network for 117 structures) scores Dice 0.881 (abdomen), 0.898 (spine) and 0.921 (thorax), in 4.3 s
 per scan, or 1.76 s per scan on a folder, for all its structures. Details, ablations and limitations are in the
 technical report.
+
+<p align="center"><img src="docs/turntable.gif" alt="Rotating 3D view of the three models' predictions" width="300"></p>
 
 ## Install
 
